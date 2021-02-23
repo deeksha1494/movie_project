@@ -2,7 +2,7 @@
   "name": "movie_project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hillc255.github.io/ReactMovieDB/",
+  "homepage": "https://deeksha1494.github.io/movie_project/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.5.2",
