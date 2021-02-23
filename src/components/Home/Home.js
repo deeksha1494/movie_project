@@ -24,7 +24,7 @@ componentDidMount(){
         this.setState({ ...state});
     } else {
     this.setState({ loading: true });
-    const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-UK&page=1`;
+    const endpoint = `https://api.themoviedb.org/3/movie/popular?api_key=34cf30e860e70940bccb8f4c53ee0349&language=en-UK&page=1`;
     this.fetchItems(endpoint);
     }
 }
@@ -38,9 +38,9 @@ this.setState({
 })
 
     if(searchTerm  === ''){
-        endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+        endpoint = `https://api.themoviedb.org/3/movie/popular?api_key=34cf30e860e70940bccb8f4c53ee0349&language=en-US&page=1`;
     } else {
-        endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}`;
+        endpoint = `https://api.themoviedb.org/3/search/movie?api_key=34cf30e860e70940bccb8f4c53ee0349&language=en-US&query=${searchTerm}`;
     }
     this.fetchItems(endpoint);
 }
@@ -50,9 +50,9 @@ loadMoreItems = () => {
     this.setState({ loading: true });
 
     if(this.state.searchTerm === ''){
-        endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
+        endpoint = `https://api.themoviedb.org/3/movie/popular?api_key=34cf30e860e70940bccb8f4c53ee0349&language=en-US&page=${this.state.currentPage + 1}`;
     } else {
-        endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`;
+        endpoint = `https://api.themoviedb.org/3/search/movie?api_key=34cf30e860e70940bccb8f4c53ee0349&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`;
     }
     this.fetchItems(endpoint);
 }
